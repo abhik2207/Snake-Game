@@ -30,7 +30,7 @@ gameStart();
 
 function gameStart() {
     running = true;
-    scoreText.textContent = score;
+    scoreText.textContent = `Score: 0`;;
     createFood();
     drawFood();
     nextTick();
@@ -76,7 +76,7 @@ function moveSnake() {
     snake.unshift(head);
     if(snake[0].x==food_x && snake[0].y==food_y){
         score++;
-        scoreText.textContent = score;
+        scoreText.textContent = `Score: ${score}`;
         createFood();
     }
     else{
@@ -122,7 +122,6 @@ function changeDirection() {
             x_velocity = 0;
             y_velocity = unitSize;
             break;
-            
     }
 }
 
